@@ -1,0 +1,128 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 248, 248, 0.5);
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content,
+#app {
+    height: 100%;
+}
+
+    #app .win-splitviewpanetoggle {
+        float: left;
+    }
+
+    /* SplitView pane content style*/
+    #app .header {
+        white-space: nowrap;
+    }
+
+    #app .title {
+        font-size: 25px;
+        left: 50px;
+        margin-top: 6px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    #app .nav-commands {
+        margin-top: 20px;
+    }
+
+.win-navbarcommand-button {
+    background-color: transparent;
+}
+
+#app .win-splitview-pane-hidden .win-navbarcommand-button {
+    width: 46px;
+}
+
+#app .win-splitview-pane-hidden .win-navbarcommand-label {
+    /* Workaround: Make sure pane doesn't scroll if ContentDialog restores focus to
+       NavBarCommand's label
+    */
+    visibility: hidden;
+}
+
+/*SplitView content style*/
+#app .win-splitview-content {
+    background-color: #eee;
+    overflow-y: auto;
+}
+
+#imgs-area{
+    margin: 0 auto;
+    width:90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0px 0px 20px 20px;
+}
+
+.center {
+    height: auto;
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.msg {
+    color: black;
+    opacity: 0.7;
+}
+
+.gallery-img {
+    transition: 0.3s;
+    flex-grow: 1;
+    width: 240px;
+    height: 180px;
+    max-height: 180px;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: black;
+    position: relative;
+  }
+  
+/*crude fix to a last-child flexbox issue
+prevents last child from growing to entire width;
+*/
+.gallery-img:last-child{
+    margin-right: 20px;
+    margin-top: 20px;
+    max-width: 47%;
+    min-width: 47%;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 650px) {
+    .gallery-img:last-child{
+        min-width: 97%;
+        margin-bottom: 50px;
+    }
+}
+
+.gallery-img:hover {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.btn {
+    border: none;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .info {background-color: #2196F3; width: 100%; height: 0px; opacity: 0;  transition: 0.3s; position: absolute; bottom: 0; left: 0} /* Blue */
+  .info:hover {background: #0b7dda;}
+ 

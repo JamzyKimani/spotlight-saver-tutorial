@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Windows Lockscreen Image Saver</title>
+      <link rel="stylesheet" href="./css/main.css" />
+      <link href="../node_modules/winjs/css/ui-dark.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="app">
+            <div class="splitView" data-win-control="WinJS.UI.SplitView">
+                <!-- Pane area -->
+                <div>
+                    <div class="header">
+                        <button
+                            class="win-splitviewpanetoggle"
+                            data-win-control="WinJS.UI.SplitViewPaneToggle"
+                            data-win-options="{ splitView: select('.splitView') }"
+                        ></button>
+                        <div class="title">Settings</div>
+                    </div>
+        
+                    <div class="nav-commands">
+                        <div id="openFolderBtn" data-win-control="WinJS.UI.NavBarCommand" data-win-options="{ label: 'Open images folder', icon: 'folder'}" ></div>
+                        <div id="aboutSoftwareBtn" data-win-control="WinJS.UI.NavBarCommand" data-win-options="{ label: 'About Software', icon: 'library'}" ></div>
+                    </div>
+                </div>
+        
+                <!-- Content area -->
+                <div id="imgs-area" > <div class="center msg" id="msg-area"> loading... </div> </div> 
+            </div> 
+        </div>
+
+      <script src="./js/index.js" ></script>
+      <!--WinJS SCRIPTS IMPORTED HERE -->
+      <script src="../node_modules/winjs/js/base.js"></script>
+      <script src="../node_modules/winjs/js/ui.js"></script> 
+    </body>
+    
+</html>
+

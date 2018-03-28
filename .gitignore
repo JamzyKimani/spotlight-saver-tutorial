@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+#electron-packager packaged app
+spotlight-saver-*/
